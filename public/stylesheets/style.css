@@ -1,8 +1,9 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+legend {
+    font-family: 'Montserrat', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
