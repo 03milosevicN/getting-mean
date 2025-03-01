@@ -12,7 +12,5 @@ const reviewController = (req, res) => {
 
 
 module.exports = {
-    indexController,
-    detailsController,
-    reviewController,
+    detailsController, reviewController, indexController
 }
