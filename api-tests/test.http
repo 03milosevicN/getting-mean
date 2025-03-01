@@ -1,1 +1,9 @@
 GET localhost:3000/about
+###
+GET localhost:3000/details
+###
+GET localhost:3000/
+###
+GET localhost:3000/review
+
+
