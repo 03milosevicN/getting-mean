@@ -1,13 +1,13 @@
 const indexController = (req, res) => {
-    res.render('index');
+    res.render('index', {title: 'Home'});
 }
 
 const detailsController = (req, res) => {
-    res.render('details');
+    res.render('details', {title: 'Details'});
 }
 
 const reviewController = (req, res) => {
-    res.render('review');
+    res.render('review', {title: 'Review'});
 }
 
 
