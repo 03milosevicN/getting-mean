@@ -1,4 +1,46 @@
-extends layout
+doctype html
+html
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/all.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
 
-block content
-    h1 "Details on given location"
+        // leaflet.js for map API
+        link(rel='stylesheet' href='/stylesheets/leaflet.css')
+        style.
+            #map {height: 250px; width: 250px}
+    body
+
+        nav.navbar.navbar-expand.navbar.bg-light
+            .container-fluid
+                a.navbar-brand(href='/') Loc8r
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarMain' aria-controls='navbarMain' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarMain.navbar-collapse.collapse
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a.nav-link(href='/about/') About
+                        li.nav-item
+                            a.nav-link(href='/details/') Details
+                        li.nav-item
+                            a.nav-link(href='/') Home
+                        li.nav-item
+                            a.nav-link(href='/review/') Review
+
+
+        //TODO: Finish details page.
+
+        div#map
+
+        script(src='javascripts/popper.min.js')
+        script(src='javascripts/bootstrap.bundle.min.js')
+
+        //leaflet.js for map API
+        script(src='/javascripts/leaflet.js')
+        script.
+            let map = L.map('map').setView([51.505, -0.09], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
