@@ -1,4 +1,14 @@
 extends layout
 
 block content
-    h1 "Location review form"
+    form
+        div.form-group
+            label(for="label-name") Name
+            input.form-control#label-name
+        div.form-group
+            label(for="label-textarea") Review
+            textarea.form-control#label-textarea(rows=3)
+        div.form-group
+            label(for="label-rating") Rating
+            input(type="number" value="1" min="0" max="5").form-control#label-rating
+        button.btn.btn-primary(type="submit") Submit
